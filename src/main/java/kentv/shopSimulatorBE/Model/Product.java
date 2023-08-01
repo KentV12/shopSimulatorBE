@@ -1,4 +1,4 @@
-package kentv.shopSimulatorBE;
+package kentv.shopSimulatorBE.Model;
 
 public class Product {
     private String name;

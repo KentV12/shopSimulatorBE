@@ -1,5 +1,6 @@
-package kentv.shopSimulatorBE;
+package kentv.shopSimulatorBE.Controller;
 
+import kentv.shopSimulatorBE.Model.Product;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
