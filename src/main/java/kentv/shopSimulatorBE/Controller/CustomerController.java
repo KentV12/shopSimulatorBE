@@ -13,21 +13,13 @@ public class CustomerController {
     private CustomerService customerService;
 
     @PostMapping("/login")
-    public String login(@RequestBody Customer customer) {
-        String username = customer.getId();
-        String password = customer.getPassword();
-
-        return "Received: " + username + " and " + password;
+    public void login(@RequestBody Customer customer) {
+        customerService.login(customer);
     }
 
     @PostMapping("/register")
-    public String register(@RequestBody Customer customer) {
-        String username = customer.getId();
-        String password = customer.getPassword();
-
+    public void register(@RequestBody Customer customer) {
         customerService.addCustomer(customer);
-
-        return "Register: " + username + " and " + password;
     }
 
 }

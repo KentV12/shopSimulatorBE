@@ -11,6 +11,10 @@ public class CustomerService {
     @Autowired
     private CustomerRepository customerRepository;
 
+    public void login(Customer customer) {
+
+    }
+
     public void addCustomer (Customer customer) {
          customerRepository.save(customer);
     }
