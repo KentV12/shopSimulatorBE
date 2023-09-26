@@ -9,12 +9,14 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 public class CustomerController {
+
     @Autowired
     private CustomerService customerService;
 
-    @PostMapping("/login")
+    @PostMapping("/userlogin")
     public void login(@RequestBody Customer customer) {
-        customerService.login(customer);
+        System.out.println("logging in " + customer.getId());
+        // customerService.loginCustomer(customer);
     }
 
     @PostMapping("/register")
