@@ -1,5 +1,6 @@
 package kentv.shopSimulatorBE.Config;
 
+import kentv.shopSimulatorBE.Filter.JwtAuthFilter;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -13,6 +14,7 @@ import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.web.SecurityFilterChain;
+import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
 
 import javax.sql.DataSource;
 
@@ -22,17 +24,22 @@ public class SecurityConfig {
     @Autowired
     private DataSource dataSource;
 
+    @Autowired
+    private JwtAuthFilter jwtAuthFilter;
+
     @Bean
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
         http
                 .authorizeHttpRequests((request) -> request
-                        .requestMatchers("/register").permitAll()
+                        .requestMatchers("/register", "/authenticate").permitAll()
                         .requestMatchers("/products").hasAnyRole("USER", "ADMIN")
                         .anyRequest().authenticated()
                 )
                 .formLogin(Customizer.withDefaults())
-                .csrf((csrf) -> csrf.disable())
-                .authenticationProvider(authenticationProvider()); // not recommended but needed to disable for post request from React
+                .csrf((csrf) -> csrf.disable()) // not recommended but needed to disable for post request from React
+                .authenticationProvider(authenticationProvider())
+                .addFilterBefore(jwtAuthFilter, UsernamePasswordAuthenticationFilter.class)
+                .sessionManagement(Customizer.withDefaults());
 
         return http.build();
     }
