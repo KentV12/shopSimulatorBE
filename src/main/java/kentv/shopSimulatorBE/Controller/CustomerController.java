@@ -37,6 +37,7 @@ public class CustomerController {
         customerService.addCustomer(customer);
     }
 
+    // an endpoint that receives username and password and generates a token
     @PostMapping("/authenticate")
     public String authenticate(@RequestBody AuthRequest authRequest) {
         Authentication authentication = authenticationManager.authenticate(new UsernamePasswordAuthenticationToken(authRequest.getUsername(), authRequest.getPassword()));

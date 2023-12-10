@@ -37,8 +37,9 @@ public class SecurityConfig {
                 )
                 .formLogin(Customizer.withDefaults())
                 .csrf((csrf) -> csrf.disable()) // not recommended but needed to disable for post request from React
+                .cors((cors) -> cors.disable())
                 .authenticationProvider(authenticationProvider())
-                .addFilterBefore(jwtAuthFilter, UsernamePasswordAuthenticationFilter.class)
+                .addFilterBefore(jwtAuthFilter, UsernamePasswordAuthenticationFilter.class) // run AuthFilter before using username and password
                 .sessionManagement(Customizer.withDefaults());
 
         return http.build();

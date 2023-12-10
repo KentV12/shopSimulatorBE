@@ -1,5 +1,6 @@
 package kentv.shopSimulatorBE.Model;
 
+// used in CustomerController for grouping
 public class AuthRequest {
 
     private String username;

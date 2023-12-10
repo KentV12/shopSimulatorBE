@@ -17,6 +17,7 @@ import org.springframework.web.filter.OncePerRequestFilter;
 
 import java.io.IOException;
 
+// a custom filter used to log in with JWT
 @Component
 public class JwtAuthFilter extends OncePerRequestFilter {
 
