@@ -14,13 +14,17 @@ public class HomeProductController {
     public List<Product> getProduct() {
         List<Product> productList = new ArrayList<>();
 
-        Product GPU = new Product("GPU", 349.99);
-        Product car = new Product("Car", 5999.99);
-        Product controller = new Product("Controller", 69.99);
+        Product chips = new Product("Lays Potato Chips", 3, "Snack");
+        Product chocolate = new Product("Chocolate", 5, "Snack");
+        Product cheese = new Product("Shredded Cheese", 6, "Drink");
+        Product yogurt = new Product("Yogurt", 4, "Dairy");
+        Product butter = new Product("Butter", 5, "Meat");
 
-        productList.add(GPU);
-        productList.add(car);
-        productList.add(controller);
+        productList.add(chips);
+        productList.add(chocolate);
+        productList.add(cheese);
+        productList.add(yogurt);
+        productList.add(butter);
 
         return productList;
     }

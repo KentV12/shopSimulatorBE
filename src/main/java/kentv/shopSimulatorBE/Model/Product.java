@@ -3,10 +3,12 @@ package kentv.shopSimulatorBE.Model;
 public class Product {
     private String name;
     private double price;
+    private String category;
 
-    public Product(String name, double price) {
+    public Product(String name, double price, String category) {
         this.name = name;
         this.price = price;
+        this.category = category;
     }
 
     public String getName() {
@@ -23,5 +25,13 @@ public class Product {
 
     public void setPrice(double price) {
         this.price = price;
+    }
+
+    public String getCategory() {
+        return category;
+    }
+
+    public void setCategory(String category) {
+        this.category = category;
     }
 }
