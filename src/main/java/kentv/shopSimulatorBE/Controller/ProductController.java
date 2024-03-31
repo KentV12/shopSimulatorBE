@@ -15,11 +15,17 @@ public class ProductController {
     public List<Product> getProduct() {
         List<Product> productList = new ArrayList<>();
 
-        Product chips = new Product("Lays Potato Chips", 3, "Snack");
-        Product chocolate = new Product("Chocolate", 5, "Snack");
-        Product cheese = new Product("Shredded Cheese", 6, "Drink");
-        Product yogurt = new Product("Yogurt", 4, "Dairy");
-        Product butter = new Product("Butter", 5, "Meat");
+        // placeholder items - representing retrieval of inventory in database
+        Product chips = new Product("Lays Potato Chips", 3, "Snack",
+                "https://karantenabc.hu/img/44906/596238/440x440,r/596238.jpg?time=1690947737");
+        Product chocolate = new Product("Chocolate", 5, "Snack",
+                "https://karantenabc.hu/img/44906/596238/440x440,r/596238.jpg?time=1690947737");
+        Product cheese = new Product("Shredded Cheese", 6, "Drink",
+                "https://karantenabc.hu/img/44906/596238/440x440,r/596238.jpg?time=1690947737");
+        Product yogurt = new Product("Yogurt", 4, "Dairy",
+                "https://karantenabc.hu/img/44906/596238/440x440,r/596238.jpg?time=1690947737");
+        Product butter = new Product("Butter", 5, "Meat",
+                "https://karantenabc.hu/img/44906/596238/440x440,r/596238.jpg?time=1690947737");
 
         productList.add(chips);
         productList.add(chocolate);
