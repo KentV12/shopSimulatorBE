@@ -16,8 +16,10 @@ public class ProductController {
         List<Product> productList = new ArrayList<>();
 
         // placeholder items - representing retrieval of inventory in database
+//        Product chips = new Product("Lays Potato Chips", 3, "Snack",
+//                "https://karantenabc.hu/img/44906/596238/440x440,r/596238.jpg?time=1690947737");
         Product chips = new Product("Lays Potato Chips", 3, "Snack",
-                "https://karantenabc.hu/img/44906/596238/440x440,r/596238.jpg?time=1690947737");
+                "https://freshcart.codescandy.com/assets/images/products/product-img-4.jpg");
         Product chocolate = new Product("Chocolate", 5, "Snack",
                 "https://karantenabc.hu/img/44906/596238/440x440,r/596238.jpg?time=1690947737");
         Product cheese = new Product("Shredded Cheese", 6, "Drink",

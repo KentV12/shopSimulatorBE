@@ -33,8 +33,9 @@ public class CustomerController {
 
     @PostMapping("/register")
     public void register(@RequestBody Customer customer) {
-        customer.setRoles("ROLE_USER");
-        customerService.addCustomer(customer);
+        // System.out.println("registering " + customer.getUsername());
+         customer.setRoles("ROLE_USER");
+         customerService.addCustomer(customer);
     }
 
     // an endpoint that receives username and password and generates a token

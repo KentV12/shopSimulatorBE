@@ -15,15 +15,15 @@ public class HomeProductController {
         List<Product> productList = new ArrayList<>();
 
         Product chips = new Product("Lays Potato Chips", 3, "Snack",
-                "https://karantenabc.hu/img/44906/596238/440x440,r/596238.jpg?time=1690947737");
+                "https://freshcart.codescandy.com/assets/images/products/product-img-4.jpg");
         Product chocolate = new Product("Chocolate", 5, "Snack",
-                "https://i5.walmartimages.com/asr/3cbef0c9-60c4-4953-a699-5940751d16b0.65c1fc53297a6e8bbb095dee12e18801.jpeg?odnHeight=612&odnWidth=612&odnBg=FFFFFF");
+                "https://freshcart.codescandy.com/assets/images/products/product-img-9.jpg");
         Product cheese = new Product("Shredded Cheese", 6, "Drink",
-                "https://crackerbarrel.ca/wp-content/uploads/2022/06/0002_2043510_620g_CB_CB_DOUBCHED_SHRED_3D.png");
+                "https://freshcart.codescandy.com/assets/images/products/product-img-7.jpg");
         Product yogurt = new Product("Yogurt", 4, "Dairy",
-                "https://www.stonyfield.com/wp-content/uploads/2023/03/Greek-0-PLain.png");
+                "https://freshcart.codescandy.com/assets/images/products/product-img-6.jpg");
         Product butter = new Product("Butter", 5, "Meat",
-                "https://www.dairyfoods.com/ext/resources/Food-Photos/Butter_images/Country-Crock-30oz_Rectangle-Tub_-900.jpg");
+                "https://freshcart.codescandy.com/assets/images/products/product-img-10.jpg");
 
         productList.add(chips);
         productList.add(chocolate);
