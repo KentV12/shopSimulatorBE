@@ -15,19 +15,16 @@ public class ProductController {
     public List<Product> getProduct() {
         List<Product> productList = new ArrayList<>();
 
-        // placeholder items - representing retrieval of inventory in database
-//        Product chips = new Product("Lays Potato Chips", 3, "Snack",
-//                "https://karantenabc.hu/img/44906/596238/440x440,r/596238.jpg?time=1690947737");
-        Product chips = new Product("Lays Potato Chips", 3, "Snack",
+        Product chips = new Product("Potato Chips", 3, "Snack",
                 "https://freshcart.codescandy.com/assets/images/products/product-img-4.jpg");
         Product chocolate = new Product("Chocolate", 5, "Snack",
-                "https://karantenabc.hu/img/44906/596238/440x440,r/596238.jpg?time=1690947737");
-        Product cheese = new Product("Shredded Cheese", 6, "Drink",
-                "https://karantenabc.hu/img/44906/596238/440x440,r/596238.jpg?time=1690947737");
+                "https://freshcart.codescandy.com/assets/images/products/product-img-9.jpg");
+        Product cheese = new Product("Cheese", 6, "Drink",
+                "https://freshcart.codescandy.com/assets/images/products/product-img-7.jpg");
         Product yogurt = new Product("Yogurt", 4, "Dairy",
-                "https://karantenabc.hu/img/44906/596238/440x440,r/596238.jpg?time=1690947737");
+                "https://freshcart.codescandy.com/assets/images/products/product-img-6.jpg");
         Product butter = new Product("Butter", 5, "Meat",
-                "https://karantenabc.hu/img/44906/596238/440x440,r/596238.jpg?time=1690947737");
+                "https://freshcart.codescandy.com/assets/images/products/product-img-10.jpg");
 
         productList.add(chips);
         productList.add(chocolate);

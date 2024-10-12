@@ -1,5 +1,6 @@
 package kentv.shopSimulatorBE.Controller;
 
+import kentv.shopSimulatorBE.Config.MyUserDetailsService;
 import kentv.shopSimulatorBE.Model.AuthRequest;
 import kentv.shopSimulatorBE.Model.Customer;
 import kentv.shopSimulatorBE.Service.CustomerService;
@@ -8,6 +9,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.Authentication;
+import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -24,6 +26,9 @@ public class CustomerController {
 
     @Autowired
     private AuthenticationManager authenticationManager;
+
+    @Autowired
+    private MyUserDetailsService userDetailsService;
 
     @PostMapping("/userlogin")
     public void login(@RequestBody Customer customer) {
@@ -50,4 +55,9 @@ public class CustomerController {
         }
     }
 
+    @PostMapping("/account")
+    public void accountInfo() {
+        // dummy route for testing
+        // retrieve purchases from db
+    }
 }

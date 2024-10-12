@@ -12,25 +12,25 @@ public class Purchase {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
     private String username;
-    private int quantity;
+    private String itemName;
     private int price;
 
-    public Purchase(int id, String username, int quantity, int price) {
+    public Purchase(int id, String username, String itemName, int price) {
         this.id = id;
         this.username = username;
-        this.quantity = quantity;
+        this.itemName = itemName;
         this.price = price;
     }
 
     public Purchase() {
     }
 
-    public int getQuantity() {
-        return quantity;
+    public String getItemName() {
+        return itemName;
     }
 
-    public void setQuantity(int quantity) {
-        this.quantity = quantity;
+    public void setItemName(String itemName) {
+        this.itemName = itemName;
     }
 
     public int getPrice() {
