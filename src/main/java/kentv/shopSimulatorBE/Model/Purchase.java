@@ -12,28 +12,18 @@ public class Purchase {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
     private String username;
-    private String itemName;
-    private int price;
+    private double price;
 
-    public Purchase(int id, String username, String itemName, int price) {
+    public Purchase(int id, String username, String itemName, double price) {
         this.id = id;
         this.username = username;
-        this.itemName = itemName;
         this.price = price;
     }
 
     public Purchase() {
     }
 
-    public String getItemName() {
-        return itemName;
-    }
-
-    public void setItemName(String itemName) {
-        this.itemName = itemName;
-    }
-
-    public int getPrice() {
+    public double getPrice() {
         return price;
     }
 
